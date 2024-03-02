@@ -28,6 +28,7 @@ service_obj = Service()
 driver = webdriver.Edge(options=options,service=service_obj)
 """
 
+# Selenium scans everything on web application from top left
 print(driver.title)
 print(driver.current_url)
 driver.refresh()
