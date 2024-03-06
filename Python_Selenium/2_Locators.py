@@ -45,6 +45,7 @@ driver.find_element(By.CSS_SELECTOR, "#inlineRadio1").click()
 
 # Submit button on the form
 # Locator used -> Xpath -  //tagname[@attribute='value']
+# Xpath for text - //tagname[text()='text name']
 driver.find_element(By.XPATH, "//input[@type='submit']").click()
 
 # Success message after clicking on Submit button
