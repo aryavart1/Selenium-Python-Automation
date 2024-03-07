@@ -6,6 +6,8 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
@@ -19,8 +21,8 @@ driver.get("https://rahulshettyacademy.com/seleniumPractise/#/")
 driver.find_element(By.CSS_SELECTOR, ".search-keyword").send_keys("ber")
 time.sleep(2)
 
-# Implicit wait (It's a global timeout and it's applied to each line of code)
-driver.implicitly_wait(5)
+# Adding Implicit wait (It's a global timeout, and it's applied to each line of code)
+driver.implicitly_wait(2)
 
 results = driver.find_elements(By.XPATH, "//div[@class='products']/div")
 count = len(results) 
@@ -43,7 +45,13 @@ driver.find_element(By.CSS_SELECTOR, ".promoCode").send_keys("rahulshettyacademy
 
 # Clicking on Apply button next to "Enter promo code" text field on the Page
 driver.find_element(By.CSS_SELECTOR, ".promoBtn").click()
+
+# Adding Explicit wait
+wait = WebDriverWait(driver, 10)
+wait.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, ".promoInfo")))
+
 print(driver.find_element(By.CLASS_NAME, "promoInfo").text)
+
 
 
 
