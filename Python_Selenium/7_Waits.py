@@ -9,6 +9,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
+expectedList = ['Cucumber - 1 Kg', 'Raspberry -1/4 Kg', 'Strawberry - 1/4 Kg']
+
+
+
+
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
 
@@ -21,6 +26,8 @@ driver.get("https://rahulshettyacademy.com/seleniumPractise/#/")
 driver.find_element(By.CSS_SELECTOR, ".search-keyword").send_keys("ber")
 time.sleep(2)
 
+driver.find_element()
+
 # Adding Implicit wait (It's a global timeout, and it's applied to each line of code)
 driver.implicitly_wait(2)
 
@@ -31,6 +38,7 @@ assert count > 0
 # Chaining -> from parent webelements accessing child webelements under it
 # Adding products in cart by clicking on ADD TO CART button
 for result in results:
+    result.find_element(By.XPATH, "")
     result.find_element(By.XPATH, "div/button").click()
 
 # Clicking on Cart image on top right corner of the Page
@@ -39,6 +47,18 @@ driver.find_element(By.CSS_SELECTOR, "img[alt='Cart").click()
 # Clicking on Cart image on top right corner of the Page
 # Locator used -> Xpath for text - //tagname[text()='text name']
 driver.find_element(By.XPATH, "//button[text()='PROCEED TO CHECKOUT']").click()
+
+# Functional Automation
+# Sum validation
+prices = driver.find_elements(By.CSS_SELECTOR, "tr td:nth-child(5) p")
+sum = 0
+for price in prices:
+    sum = sum + int(price.text)
+print(sum)
+
+total_amount = int(driver.find_element(By.CSS_SELECTOR, ".totAmt").text)
+
+assert sum == total_amount
 
 # Sending value in the "Enter promo code" text field of the page.
 driver.find_element(By.CSS_SELECTOR, ".promoCode").send_keys("rahulshettyacademy")
