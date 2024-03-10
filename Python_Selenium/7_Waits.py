@@ -1,6 +1,4 @@
-""" Developing End to End Testcase to Automate ecommerce GreenKart Application
-    Synchronization (Explicit & Implicit Waits) in Selenium Webdriver """
-
+""" Functional Automation & Developing End to End Testcase to Automate ecommerce GreenKart Application"""
 
 import time
 from selenium import webdriver
@@ -10,8 +8,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
 expectedList = ['Cucumber - 1 Kg', 'Raspberry -1/4 Kg', 'Strawberry - 1/4 Kg']
-
-
+actualList = []
 
 
 options = webdriver.ChromeOptions()
@@ -26,7 +23,8 @@ driver.get("https://rahulshettyacademy.com/seleniumPractise/#/")
 driver.find_element(By.CSS_SELECTOR, ".search-keyword").send_keys("ber")
 time.sleep(2)
 
-driver.find_element()
+
+""" Synchronization (Explicit & Implicit Waits) in Selenium Webdriver """
 
 # Adding Implicit wait (It's a global timeout, and it's applied to each line of code)
 driver.implicitly_wait(2)
@@ -38,7 +36,7 @@ assert count > 0
 # Chaining -> from parent webelements accessing child webelements under it
 # Adding products in cart by clicking on ADD TO CART button
 for result in results:
-    result.find_element(By.XPATH, "")
+    actualList.append(result.find_element(By.XPATH, "h4").text)  # Adding Product name in the List
     result.find_element(By.XPATH, "div/button").click()
 
 # Clicking on Cart image on top right corner of the Page
@@ -52,6 +50,7 @@ driver.find_element(By.XPATH, "//button[text()='PROCEED TO CHECKOUT']").click()
 # Sum validation
 prices = driver.find_elements(By.CSS_SELECTOR, "tr td:nth-child(5) p")
 sum = 0
+
 for price in prices:
     sum = sum + int(price.text)
 print(sum)
@@ -71,6 +70,8 @@ wait = WebDriverWait(driver, 10)
 wait.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, ".promoInfo")))
 
 print(driver.find_element(By.CLASS_NAME, "promoInfo").text)
+
+
 
 
 
