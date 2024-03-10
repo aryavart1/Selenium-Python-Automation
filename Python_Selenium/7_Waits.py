@@ -7,8 +7,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
-expectedList = ['Cucumber - 1 Kg', 'Raspberry -1/4 Kg', 'Strawberry - 1/4 Kg']
-actualList = []
+expected_list = ['Cucumber - 1 Kg', 'Raspberry - 1/4 Kg', 'Strawberry - 1/4 Kg']
+actual_list = []
 
 
 options = webdriver.ChromeOptions()
@@ -36,8 +36,10 @@ assert count > 0
 # Chaining -> from parent webelements accessing child webelements under it
 # Adding products in cart by clicking on ADD TO CART button
 for result in results:
-    actualList.append(result.find_element(By.XPATH, "h4").text)  # Adding Product name in the List
+    actual_list.append(result.find_element(By.XPATH, "h4").text)  # Adding Product name in the List
     result.find_element(By.XPATH, "div/button").click()
+
+assert expected_list == actual_list
 
 # Clicking on Cart image on top right corner of the Page
 driver.find_element(By.CSS_SELECTOR, "img[alt='Cart").click()
@@ -68,12 +70,11 @@ driver.find_element(By.CSS_SELECTOR, ".promoBtn").click()
 # Adding Explicit wait
 wait = WebDriverWait(driver, 10)
 wait.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, ".promoInfo")))
-
 print(driver.find_element(By.CLASS_NAME, "promoInfo").text)
 
-
-
-
+# Checking if discounted amount is always lesser than total amount
+discounted_amount = float(driver.find_element(By.CSS_SELECTOR, ".discountAmt").text)
+assert total_amount > discounted_amount
 
 
 
