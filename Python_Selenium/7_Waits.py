@@ -27,6 +27,8 @@ time.sleep(2)
 """ Synchronization (Explicit & Implicit Waits) in Selenium Webdriver """
 
 # Adding Implicit wait (It's a global timeout, and it's applied to each line of code)
+# Implicit wait doesn't catch performance errors
+# Maximum implicit wait time is applied to the testcase before throwing an exception
 driver.implicitly_wait(2)
 
 results = driver.find_elements(By.XPATH, "//div[@class='products']/div")
