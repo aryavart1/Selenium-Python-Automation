@@ -13,9 +13,23 @@ driver = webdriver.Chrome(options=options, service=service_obj)
 driver.maximize_window()
 driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers")
 
+browser_sorted_veg = []
+
 # Click on column header
 driver.find_element(By.XPATH, "//span[text()='Veg/fruit name']").click()
-# Collecting all browser sorted vegetable names -> veg_list
-# Sorting veg_list -> new_sorted_list
-# Verify that veg_list == new_sorted_list
+
+# Collect all browser sorted vegetable names -> browser_sorted_veg
+# To check XPath -> Go to console -> $x("//tr/td[1])
+veg_web_elements = driver.find_elements(By.XPATH, "//tr/td[1]")
+
+for veg in veg_web_elements:
+    browser_sorted_veg.append(veg.text)
+
+original_browser_sorted_veg = browser_sorted_veg.copy()
+
+# Sorting browser_sorted_veg -> new_sorted_list
+browser_sorted_veg.sort()
+
+# Verify that browser_sorted_veg == new_sorted_list
+assert browser_sorted_veg == original_browser_sorted_veg
 
