@@ -11,10 +11,13 @@ options.add_argument("--start-maximized")
 options.add_argument("headless")
 options.add_argument("--ignore-certificate-errors")
 
-
-
 service_obj = Service()
+
+# Invocation of Chrome browser
 driver = webdriver.Chrome(options=options, service=service_obj)
 
 driver.maximize_window()
-driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers")
+driver.get("https://the-internet.herokuapp.com/")
+
+print(driver.title)
+
