@@ -35,7 +35,7 @@ results = driver.find_elements(By.XPATH, "//div[@class='products']/div")
 count = len(results) 
 assert count > 0
 
-# Chaining -> from parent webelements accessing child webelements under it
+""" Chaining -> from parent webelements accessing child webelements under it """
 # Adding products in cart by clicking on ADD TO CART button
 for result in results:
     actual_list.append(result.find_element(By.XPATH, "h4").text)  # Adding Product name in the List
