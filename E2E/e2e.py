@@ -29,3 +29,19 @@ for product in products:
     product_name = product.find_element(By.XPATH, "div/h4/a").text
     if product_name == "Blackberry":
         product.find_element(By.XPATH, "div/button").click()
+
+driver.find_element(By.CSS_SELECTOR, "a[class*='btn-primary']").click()
+driver.find_element(By.CSS_SELECTOR, "a[class*='btn-success']").click()
+driver.find_element(By.ID, "country").send_keys("Ind")
+
+# Adding Explicit wait
+wait = WebDriverWait(driver, 10)
+"""presenceOfElementLocated - element is present on the DOM of a page. 
+   visibilityOfElementLocated -> element is present on the DOM of a page and visible"""
+wait.until(expected_conditions.presence_of_element_located(By.LINK_TEXT, 'India'))
+driver.find_element(By.LINK_TEXT, "India").click()
+
+driver.find_element(By.XPATH, "//div[@class='checkbox checkbox-primary']").click()
+driver.find_element(By.CSS_SELECTOR, "input[type='submit']")
+
+

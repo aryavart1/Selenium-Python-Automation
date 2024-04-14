@@ -20,6 +20,7 @@ driver.get("https://rahulshettyacademy.com/angularpractice/")
 
 # Name field on the form
 # Locator used -> CSS Selector - tagname[attribute='value'],  #id, .classname
+# Tag name is optional for CSS selectors
 driver.find_element(By.CSS_SELECTOR, "input[name = 'name']").send_keys("James")
 
 # Email field on the form
