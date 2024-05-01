@@ -30,18 +30,26 @@ for product in products:
     if product_name == "Blackberry":
         product.find_element(By.XPATH, "div/button").click()
 
+# Cart button
 driver.find_element(By.CSS_SELECTOR, "a[class*='btn-primary']").click()
-driver.find_element(By.CSS_SELECTOR, "a[class*='btn-success']").click()
+
+# Checkout button
+driver.find_element(By.XPATH, "//button[@class='btn btn-success']").click()
+
 driver.find_element(By.ID, "country").send_keys("Ind")
 
 # Adding Explicit wait
 wait = WebDriverWait(driver, 10)
 """presenceOfElementLocated - element is present on the DOM of a page. 
    visibilityOfElementLocated -> element is present on the DOM of a page and visible"""
-wait.until(expected_conditions.presence_of_element_located(By.LINK_TEXT, 'India'))
+wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "India")))
 driver.find_element(By.LINK_TEXT, "India").click()
 
 driver.find_element(By.XPATH, "//div[@class='checkbox checkbox-primary']").click()
-driver.find_element(By.CSS_SELECTOR, "input[type='submit']")
+driver.find_element(By.CSS_SELECTOR, "input[type='submit']").click()
+
+success_text = driver.find_element(By.CLASS_NAME, "alert-success").text
+assert "Success! Thank you! Your order will be delivered in next few weeks :-)." in success_text
+
 
 

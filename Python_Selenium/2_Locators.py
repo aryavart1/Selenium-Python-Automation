@@ -17,6 +17,10 @@ driver.get("https://rahulshettyacademy.com/angularpractice/")
 
 # ID, Xpath, CSS Selector, Classname, name, Link Text
 
+# To verify the locator is pointing to the right web element
+# Go to console
+# $x("") -> Xpath
+# $("") -> CSS
 
 # Name field on the form
 # Locator used -> CSS Selector - tagname[attribute='value'],  #id, .classname
