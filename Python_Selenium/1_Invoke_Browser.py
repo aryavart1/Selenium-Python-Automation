@@ -35,3 +35,5 @@ driver.refresh()
 
 time.sleep(2)
 
+# driver.close() // closes the actual invoked window
+# driver.quit() // closes all the associated windows
