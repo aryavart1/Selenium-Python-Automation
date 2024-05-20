@@ -11,7 +11,7 @@ driver = webdriver.Chrome(options=options, service=service_obj)
 driver.maximize_window()
 driver.get("https://rahulshettyacademy.com/client")
 
-# 2_Locators ->  ID, Xpath, CSS Selector, Classname, name, Link Text
+# Locators ->  ID, Xpath, CSS Selector, Classname, name, Link Text
 
 # Clicking on Forgot Password link button on the Page 1
 # Locator used -> Link Text (similar locator Partial Link Text can also be used)
