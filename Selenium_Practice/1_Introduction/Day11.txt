@@ -1,0 +1,80 @@
+Selenium WebDriver
+-----------------------
+What is WebDriver?
+
+-> WebDriver is One of the component in selenium.
+-> WebDriver is module
+
+firefox browser -----> Firefox()
+Chrome Browser ---> Chrome()
+Edge---> Edge()
+--
+---
+---
+
+-> WebDriver is an API (Application Programming Interface)
+
+Architecture of WebDriver
+-------------
+Selenium3
+-----
+Selenium Language bindings--JSON Wire protocol---> Browser drivers---w3c--> Browsers
+
+Selenium4
+-----
+Selenium Language bindings--w3c---> Browser drivers---w3c--> Browsers
+
+
+Setup & configure WebDriver in Pycharm
+---------------------------------------
+Pre-requisites:
+----------
+  Python
+  Pychamp
+
+1) Download browser specific drivers using below links....
+
+Chrome:	https://chromedriver.chromium.org/downloads
+Edge:	https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+Firefox:	https://github.com/mozilla/geckodriver/releases
+
+Once you donwloaded, extract .zip files then you will see .exe files ( they are drivers)
+
+2) setup selenium webdriver
+	Appraoch#1:
+		pip install selenium==4.0.0.b4
+		pip install selenium
+	Appraoch#2:
+		or through Pycharm project settings...
+
+
+Test Case
+-----------
+1) Open Web Browser(Chrome/firefox/Edge).
+2) Open URL  https://opensource-demo.orangehrmlive.com/
+3) Enter username  (Admin).
+4) Enter password  (admin123).   
+5) Click on Login.
+6) Capture title of the home page.(Actual title) 
+7) Verify title of the page: OrangeHRM    (Expected)
+8) close browser
+
+
+
+webdriver is a module which is available in selenium package.
+
+python default location:
+C:\Users\admin\AppData\Local\Programs\Python\Python39\Scripts
+
+
+Assignment
+-----------
+1) Open Web Browser(Chrome/firefox/IE).
+2) Open URL  https://admin-demo.nopcommerce.com/login
+3) Provide Email  (admin@yourstore.com).
+4) Provide password  (admin).   
+5) Click on Login.
+	driver.find_element(By.XPATH,"/html/body/div[6]/div/div/div/div/div[2]/div[1]/div/form/div[3]/button").click()
+6) Capture title of the dashboad page.(Actual title)
+7) Verify title of the page: "Dashboard / nopCommerce administration" (Expected)
+8) close browser
