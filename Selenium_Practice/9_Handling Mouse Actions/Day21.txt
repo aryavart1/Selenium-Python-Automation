@@ -1,0 +1,19 @@
+Day21
+-----------
+Mouse operations
+----------
+
+ActionChains
+
+1) Mouse hover  	move_to_element(element)
+2) Right click		context_click(element)
+3) Double click		double_click(element)
+4) Drag and drop	drag_and_drop(source, target)
+
+slider 	drag_and_drop_by_offset(element,X,Y)
+
+Scrolling page
+
+Assignment
+---------
+https://testautomationpractice.blogspot.com/

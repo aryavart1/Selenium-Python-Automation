@@ -1,0 +1,57 @@
+Day-18
+------------
+
+Alerts/Popups
+------
+myalert=driver.switch_to.alert
+
+myalert.text
+myalert.accept()
+myalert.dismiss()
+
+Authentication popup
+-----------------------
+
+
+http://the-internet.herokuapp.com/basic_auth
+
+syntax: http://username:password@test.com
+
+Example: http://admin:admin@the-internet.herokuapp.com/basic_auth
+
+--------------------------------------------------------------------------
+Frames/Iframes
+--------------
+
+switch_to_frame()   # selenium3
+
+#selenium4
+switch_to.frame(name of the frame)
+switch_to.frame(id of the frame)
+switch_to.frame(webelement)
+switch_to.frame(0)
+
+switch_to.default_content()
+
+frame
+iframe
+form
+
+inner frames
+
+Browser windows
+-------------------------
+switch_to.window(WindowID)
+
+
+current_window_handle     --> Return windowID of single browser window
+window_handles		--> Return window ID's of multiple browser windows
+
+
+
+Assingmenet
+----------------
+https://testautomationpractice.blogspot.com/
+
+
+

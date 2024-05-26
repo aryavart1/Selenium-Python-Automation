@@ -1,0 +1,11 @@
+Day-20
+-----------
+Date Picker
+-----------
+1) standard
+2) Non-standard( customized)
+
+
+Assignment
+--------
+https://www.dummyticket.com/dummy-ticket-for-visa-application/

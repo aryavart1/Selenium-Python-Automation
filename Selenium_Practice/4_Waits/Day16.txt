@@ -1,0 +1,73 @@
+Day-16
+------------
+wait commands
+------------
+
+time.sleep(time in seconds)
+	Adv
+	-----
+	1) simpel to use
+	
+	DisAdv
+	------
+	1) performance of the script is very poor
+	2) If the element is not available within the time mentioned , still there is a chance of getting exception.
+
+
+1) implicit wait
+
+	driver.implicitly_wait(10)
+
+	Adv
+	-----
+	1) Single statement
+	2) Performance will not be reduced.(If the element is available within the time it proceed to execute further statements.
+
+	Dis
+	---
+	2) If the element is not available within the time mentioned , still there is a chance of getting exception.
+
+
+2) explicit wait
+
+	Explicit wait works based on condition...
+
+	Adv
+	-----
+	More effectively works.
+
+	Dis
+	---
+	Multiple places
+	feel some difficulty
+
+
+
+
+elements=driver.find_elements(By.XPATH,"//div[@class='footer']//a")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

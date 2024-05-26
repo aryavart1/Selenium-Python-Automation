@@ -1,0 +1,28 @@
+Day-19
+-----------
+WebTable
+
+static webtable
+dynamic webtable
+
+<table>
+  <thead>  
+  </thead>
+  <tbody>
+	<tr>
+		<td>data</td>
+		<td>data</td>
+	</tr>
+	<tr></tr>
+	<tr></tr>
+	<tr></tr>
+	<tr></tr>
+	<tr></tr>
+
+  </tbody>
+</table>
+
+Assignment
+----------------
+Print user name along with the user role if the role is ESS...
+
