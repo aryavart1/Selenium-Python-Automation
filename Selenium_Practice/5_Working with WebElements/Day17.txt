@@ -11,11 +11,11 @@ Links
 dropdown
 ----------
 
-Assingment
+Assignment
 -----------------
 
 https://testautomationpractice.blogspot.com/
 https://itera-qa.azurewebsites.net/home/automation
 
-google searh - dynamic xpath
+google search - dynamic xpath
 bing search - dynamic xpath
