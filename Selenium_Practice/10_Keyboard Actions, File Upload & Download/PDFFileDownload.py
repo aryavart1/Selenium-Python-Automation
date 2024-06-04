@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import os
 
-location=os.getcwd()
+location =  os.getcwd()
 
 def chrome_setup():
     from selenium.webdriver.chrome.service import Service
