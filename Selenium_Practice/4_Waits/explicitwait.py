@@ -7,8 +7,14 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-serv_obj=Service("C:\Drivers\chromedriver_win32\chromedriver.exe")
-driver=webdriver.Chrome(service=serv_obj)
+options = webdriver.ChromeOptions()
+options.add_experimental_option("detach", True)
+
+service_obj = Service()
+driver = webdriver.Chrome(options=options, service=service_obj)
+
+'''serv_obj=Service("C:\Drivers\chromedriver_win32\chromedriver.exe")
+driver=webdriver.Chrome(service=serv_obj)'''
 
 #mywait=WebDriverWait(driver,10) # explicit wait declaration # basic
 mywait=WebDriverWait(driver,10,poll_frequency=2,ignored_exceptions=[NoSuchElementException,
