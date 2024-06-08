@@ -1,8 +1,15 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 
-serv_obj=Service("C:\Drivers\chromedriver_win32\chromedriver.exe")
-driver=webdriver.Chrome(service=serv_obj)
+options = webdriver.ChromeOptions()
+options.add_experimental_option("detach", True)
+
+service_obj = Service()
+driver = webdriver.Chrome(options=options, service=service_obj)
+
+'''serv_obj=Service("C:\Drivers\chromedriver_win32\chromedriver.exe")
+driver=webdriver.Chrome(service=serv_obj)'''
+
 driver.implicitly_wait(10)
 
 driver.get("https://demo.nopcommerce.com/")
