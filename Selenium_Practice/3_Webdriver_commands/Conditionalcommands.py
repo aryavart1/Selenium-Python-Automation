@@ -31,12 +31,10 @@ print(rd_female.is_selected()) #False
 rd_male.click()  # select male radio button
 
 print("After selecting male radio button.....")
-print(rd_male.is_selected()) #True
+assert rd_male.is_selected() #True
 print(rd_female.is_selected()) #False
 
 rd_female.click()
 print("After selecting fe-male radio button.....")
-print(rd_male.is_selected()) #False
-print(rd_female.is_selected()) #True
-
-driver.quit()
+print(rd_male.is_selected())#False
+assert rd_female.is_selected() #True

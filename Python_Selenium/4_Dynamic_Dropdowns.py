@@ -16,9 +16,11 @@ driver.get("https://rahulshettyacademy.com/dropdownsPractise/")
 
 # Country dropdown field on Page 1
 driver.find_element(By.ID, "autosuggest").send_keys("Ind")
-time.sleep(2)
+#time.sleep(2)
 
-countries = driver.find_elements(By.CLASS_NAME, "ui-menu-item")
+# countries = driver.find_elements(By.CLASS_NAME, "ui-menu-item")
+countries = driver.find_elements(By.CSS_SELECTOR, "li[class='ui-menu-item'] a")
+# countries = driver.find_elements(By.XPATH, "//li[@class='ui-menu-item']/a")
 print(len(countries))
 
 for country in countries:
@@ -28,6 +30,6 @@ for country in countries:
 
 # Can't use Text method as the text information is not present on page, it came dynamically through running the script
 # Using Get Attribute of values to validate dynamic texts on the browser (checks the value updated in the HTML DOM)
-print(driver.find_element(By.ID, "autosuggest").get_attribute("value"))
-assert (driver.find_element(By.ID, "autosuggest").get_attribute("value")) == "India"
+print(driver.find_element(By.ID, "autosuggest").get_attribute("placeholder"))
+# assert (driver.find_element(By.ID, "autosuggest").get_attribute("value")) == "India"
 

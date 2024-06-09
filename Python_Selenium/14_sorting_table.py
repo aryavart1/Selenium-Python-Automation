@@ -3,6 +3,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+import time
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
@@ -16,7 +17,9 @@ driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers")
 browser_sorted_veg = []
 
 # Click on column header
-driver.find_element(By.XPATH, "//span[text()='Veg/fruit name']").click()
+# driver.find_element(By.XPATH, "//span[text()='Veg/fruit name']").click()
+driver.find_element(By.XPATH, "//span[starts-with(text(),'Veg/fruit')]").click()   # Xpath with starts-with()
+time.sleep(4)
 
 # Collect all browser sorted vegetable names -> browser_sorted_veg
 # To check XPath -> Go to console -> $x("//tr/td[1])

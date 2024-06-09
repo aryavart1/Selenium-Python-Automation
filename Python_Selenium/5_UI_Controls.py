@@ -30,8 +30,7 @@ for checkbox in checkboxes:
 # A case where position of Radio buttons won't change we can directly use Index of buttons
 radiobuttons = driver.find_elements(By.CSS_SELECTOR, ".radioButton")
 radiobuttons[2].click()
-assert radiobuttons[2].is_selected()
-assert radiobuttons[2].is_selected()  # To verify if the radio button is selected
+assert radiobuttons[2].is_selected() # To verify if the radio button is selected
 
 # To verify Element Displayed Example field on form
 assert driver.find_element(By.ID, "displayed-text").is_displayed()

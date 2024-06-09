@@ -62,6 +62,7 @@ print(message)
 # Check "Success" word in message
 assert "Success" in message
 
+
 # "Two-way Data Binding example:" field on form
 # Selenium scans everything on web application from top left
 # If multiple elements are identified with the same Xpath then we can use Index to make it unique

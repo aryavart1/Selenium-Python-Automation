@@ -22,7 +22,7 @@ chrome_options.add_argument("--ignore-certificate-errors")
 
 driver.get("https://rahulshettyacademy.com/AutomationPractice/")
 
-# To scroll to the bottom of the page using JavaScript
+# To scroll to the bottom of the page using JavaScript executor
 driver.execute_script("window.scrollBy(0,document.body.scrollHeight);")
 
 # Take the screenshot at the particular step and will add it to the folder

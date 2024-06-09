@@ -13,6 +13,8 @@ driver=webdriver.Chrome(service=serv_obj)'''
 
 driver.get("https://demo.nopcommerce.com/")
 
+driver.find_element(By.XPATH, "")
+
 ###########    find_element() - Returns single webelement
 
 #1)Locator matching with single webelement
@@ -42,5 +44,5 @@ driver.get("https://demo.nopcommerce.com/")
 #     print(ele.text)
 
 #3) Element not available - zero
-elements=driver.find_elements(By.LINK_TEXT,"Log")
-print("elementws returend:",len(elements))
+# elements=driver.find_elements(By.LINK_TEXT,"Log")
+# print("elementws returend:",len(elements))
