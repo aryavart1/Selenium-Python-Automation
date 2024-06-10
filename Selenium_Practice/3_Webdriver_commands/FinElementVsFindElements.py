@@ -13,17 +13,21 @@ driver=webdriver.Chrome(service=serv_obj)'''
 
 driver.get("https://demo.nopcommerce.com/")
 
-driver.find_element(By.XPATH, "")
-
 ###########    find_element() - Returns single webelement
 
 #1)Locator matching with single webelement
 # element=driver.find_element(By.XPATH,"//input[@id='small-searchterms']")
 # element.send_keys("Apple MacBook Pro 13-inch")
 
-#2) Locator matching with multiple webelements
-# element=driver.find_element(By.XPATH,"//div[@class='footer']//a")
-# print(element.text)  #prints first link from the footer "Sitemap"
+# 2) Locator matching with multiple webelements
+element=driver.find_element(By.XPATH,"//div[@class='footer']//a")
+print(element.text)  #prints first link from the footer "Sitemap"
+
+# #prints all links from the footer "Sitemap"
+elements = driver.find_elements(By.XPATH,"//div[@class='footer']//a")
+print("The total no. of footer links:", len(elements)+1)
+for ele in elements:
+    print(ele.text)
 
 #3) Element not available then throw NoSuchElementException
 # login_element=driver.find_element(By.LINK_TEXT,"Log")
@@ -45,4 +49,4 @@ driver.find_element(By.XPATH, "")
 
 #3) Element not available - zero
 # elements=driver.find_elements(By.LINK_TEXT,"Log")
-# print("elementws returend:",len(elements))
+# print("elements returned:",len(elements))

@@ -16,11 +16,11 @@ driver.get("https://rahulshettyacademy.com/dropdownsPractise/")
 
 # Country dropdown field on Page 1
 driver.find_element(By.ID, "autosuggest").send_keys("Ind")
-#time.sleep(2)
+# time.sleep(2)
 
 # countries = driver.find_elements(By.CLASS_NAME, "ui-menu-item")
-countries = driver.find_elements(By.CSS_SELECTOR, "li[class='ui-menu-item'] a")
-# countries = driver.find_elements(By.XPATH, "//li[@class='ui-menu-item']/a")
+countries = driver.find_elements(By.CSS_SELECTOR, "li[class='ui-menu-item'] a") # Locator used -> CSS Selector
+# countries = driver.find_elements(By.XPATH, "//li[@class='ui-menu-item']/a") # Locator used -> Xpath
 print(len(countries))
 
 for country in countries:
