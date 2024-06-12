@@ -17,7 +17,7 @@ driver.implicitly_wait(10) # seconds  # implicit wait
 driver.get("https://www.google.com/")
 driver.maximize_window()
 
-searchbox=driver.find_element(By.NAME,'q')
+searchbox = driver.find_element(By.NAME,'q')
 
 searchbox.send_keys("Selenium")
 searchbox.submit()

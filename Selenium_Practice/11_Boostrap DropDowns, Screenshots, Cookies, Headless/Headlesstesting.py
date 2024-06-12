@@ -1,5 +1,7 @@
-from selenium import webdriver
+""" Running Selenium Webdriver in headless mode
+    In headless mode the automation script will run in invisible mode and there will be no browser invocation """
 
+from selenium import webdriver
 def headless_chrome():
     from selenium.webdriver.chrome.service import Service
     serv_obj = Service("C:\Drivers\chromedriver_win32\chromedriver.exe")
