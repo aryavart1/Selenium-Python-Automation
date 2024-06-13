@@ -32,6 +32,7 @@ switch_to.frame(webelement)
 switch_to.frame(0)
 
 switch_to.default_content()
+switch_to.parent_frame()
 
 frame
 iframe

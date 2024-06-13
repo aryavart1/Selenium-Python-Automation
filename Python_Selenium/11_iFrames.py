@@ -13,10 +13,11 @@ options.add_experimental_option("detach", True)
 service_obj = Service()
 driver = webdriver.Chrome(options=options, service=service_obj)
 
-driver.maximize_window()
+# Validate
 driver.get("https://the-internet.herokuapp.com/iframe")
-driver.switch_to.frame("mce_0_ifr")  # added ID value from iframe tag-name
+driver.maximize_window()
 
+driver.switch_to.frame("mce_0_ifr")  # added ID value from iframe tag-name
 driver.find_element(By.ID, "tinymce").clear()
 driver.find_element(By.ID, "tinymce").send_keys("I am able to automate")
 

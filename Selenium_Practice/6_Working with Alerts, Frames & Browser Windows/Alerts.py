@@ -20,10 +20,12 @@ driver.find_element(By.XPATH,"//button[normalize-space()='Click for JS Prompt']"
 time.sleep(5)
 
 alertwindow=driver.switch_to.alert
-
 print(alertwindow.text)
+
 alertwindow.send_keys("welcome")
 
+# close alert window by using OK button
+alertwindow.accept()
 
-#alertwindow.accept() #close alert window by using OK button
-alertwindow.dismiss() #close alert window by using Cancel button
+# close alert window by using Cancel button
+# alertwindow.dismiss()

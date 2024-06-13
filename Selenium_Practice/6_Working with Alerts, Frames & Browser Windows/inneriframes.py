@@ -25,4 +25,5 @@ driver.switch_to.frame(innerframe)
 
 driver.find_element(By.XPATH,"//input[@type='text']").send_keys("welcome")
 
-#driver.switch_to.parent_frame()  # directly switch to parent frame(outerframe)
+# directly switches back to parent frame(outer-frame)
+# driver.switch_to.parent_frame()

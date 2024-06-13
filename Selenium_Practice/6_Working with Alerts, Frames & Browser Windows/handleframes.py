@@ -12,6 +12,7 @@ driver = webdriver.Chrome(options=options, service=service_obj)
 '''serv_obj=Service("C:\Drivers\chromedriver_win32\chromedriver.exe")
 driver=webdriver.Chrome(service=serv_obj)'''
 
+# Validate
 driver.get("https://www.selenium.dev/selenium/docs/api/java/index.html?overview-summary.html")
 driver.maximize_window()
 
