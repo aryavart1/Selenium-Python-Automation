@@ -29,6 +29,8 @@ drpcountry=Select(driver.find_element(By.XPATH,"//select[@id='input-country']"))
 alloptions=drpcountry.options
 print("total number of options:",len(alloptions))
 
+
+# To print all the drop-down values
 # for opt in alloptions:
 #     print(opt.text)
 
