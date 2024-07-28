@@ -26,4 +26,8 @@ driver.switch_to.frame(innerframe)
 driver.find_element(By.XPATH,"//input[@type='text']").send_keys("welcome")
 
 # directly switches back to parent frame(outer-frame)
-# driver.switch_to.parent_frame()
+driver.switch_to.parent_frame()
+print(driver.find_element(By.CSS_SELECTOR, "h5").text)
+
+# driver.switch_to.default_content()  # switches back to default browser page
+# print(driver.find_element(By.CSS_SELECTOR, "h1").text)

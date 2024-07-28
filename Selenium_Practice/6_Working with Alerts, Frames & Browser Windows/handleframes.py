@@ -26,3 +26,5 @@ driver.switch_to.default_content()  # go back to main page
 
 driver.switch_to.frame("classFrame")
 driver.find_element(By.XPATH,"/html/body/header/nav/div[1]/div[1]/ul/li[8]").click()
+
+

@@ -17,10 +17,9 @@ driver=webdriver.Chrome(service=serv_obj)'''
 driver.get("https://www.opencart.com/index.php?route=account/register")
 driver.maximize_window()
 
-#drpcountry_ele=driver.find_element(By.XPATH,"//select[@id='input-country']")
 drpcountry=Select(driver.find_element(By.XPATH,"//select[@id='input-country']"))
 
-#select option fro the edropdown
+# select option from the dropdown
 # drpcountry.select_by_visible_text("India")
 # #drpcountry.select_by_value("10")  #Argentina
 # #drpcountry.select_by_index(13)  # index
