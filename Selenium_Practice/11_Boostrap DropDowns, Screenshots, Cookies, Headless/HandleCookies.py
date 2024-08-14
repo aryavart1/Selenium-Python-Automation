@@ -16,8 +16,8 @@ driver.get("https://demo.nopcommerce.com/")
 driver.maximize_window()
 
 # Capture Cookies from the browser
-cookies=driver.get_cookies()
-print("Size of cookies:",len(cookies)) #4
+cookies = driver.get_cookies()
+print("Size of cookies:",len(cookies))  #4
 
 # Print details of all cookies
 # for c in cookies:
