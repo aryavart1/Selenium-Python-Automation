@@ -1,5 +1,8 @@
 [
+  "test_demo1.py::test_SecondGreetCreditCard",
+  "test_demo1.py::test_crossBrowser",
   "test_demo1.py::test_firstProgram",
+  "test_demo1.py::test_fixtureDemo",
   "test_demo2.py::test_FirstProgram",
   "test_demo2.py::test_SecondProgram",
   "test_demo2.py::test_firstProgram",

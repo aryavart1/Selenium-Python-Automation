@@ -6,6 +6,8 @@ class TestExample:
 
     def test_fixtureDemo(self):
         print("i will execute steps in fixtureDemo method")
+        yield
+        print("I will be printed last")
 
     def test_fixtureDemo1(self):
         print("i will execute steps in fixtureDemo1 method")

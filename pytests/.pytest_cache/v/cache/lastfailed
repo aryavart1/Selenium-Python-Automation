@@ -1,4 +1,5 @@
 {
   "test_demo2.py::test_secondProgram": true,
-  "test_demo2.py::test_FirstProgram": true
+  "test_demo2.py::test_FirstProgram": true,
+  "test_demo1.py::test_crossBrowser": true
 }

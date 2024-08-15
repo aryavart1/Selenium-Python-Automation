@@ -15,6 +15,7 @@
 
 import pytest
 @pytest.mark.smoke
+@pytest.mark.skip
 def test_firstProgram(setup):
     print("Hello")
 
@@ -22,9 +23,17 @@ def test_firstProgram(setup):
 def test_SecondGreetCreditCard():
     print("Good Morning")
 
-def test_crossBrowser(crossBrowser):
-    print(crossBrowser[1])
+# def test_crossBrowser(crossBrowser):
+#    print(crossBrowser[1])
 
+@pytest.fixture()
+def setup():
+    print("I will be executing first")
+    yield
+    print("last")
+
+def test_fixtureDemo(setup):
+    print("I will execute steps in fixture demo method")
 
 """
 import pytest
