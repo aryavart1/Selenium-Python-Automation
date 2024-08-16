@@ -1,0 +1,18 @@
+"""Data driven Fixtures to load data into tests"""
+
+# In case of returning data from the fixture it's mandatory to pass the fixture name as a parameter to the TC although
+# its declared globally
+
+import pytest
+
+# from pytestsDemo.BaseClass import BaseClass
+
+@pytest.mark.usefixtures("dataLoad")
+class TestExample2:
+
+    def test_editProfile(self, dataLoad):
+        print(dataLoad)
+        log = self.getLogger()
+        log.info(dataLoad[0])
+        log.info(dataLoad[2])
+        print(dataLoad[2])

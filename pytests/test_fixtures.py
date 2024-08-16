@@ -1,7 +1,7 @@
 import pytest
 
 
-@pytest.mark.usefixtures("setup")
+@pytest.mark.usefixtures("setup")  # passed the fixture name mentioned in conftest file as parameter
 class TestExample:
 
     def test_fixtureDemo(self):
