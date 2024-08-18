@@ -4,12 +4,17 @@
   "test_demo1.py::test_firstProgram",
   "test_demo1.py::test_fixtureDemo",
   "test_demo2.py::test_FirstProgram",
+  "test_demo2.py::test_SecondCreditCard",
   "test_demo2.py::test_SecondProgram",
   "test_demo2.py::test_firstProgram",
   "test_demo2.py::test_secondProgram",
   "test_demo3.py::test_crossBrowser[crossBrowser0]",
   "test_demo3.py::test_crossBrowser[crossBrowser1]",
   "test_demo3.py::test_crossBrowser[crossBrowser2]",
+  "test_fixtures.py::TestExample::test_fixtureDemo",
+  "test_fixtures.py::TestExample::test_fixtureDemo1",
+  "test_fixtures.py::TestExample::test_fixtureDemo2",
+  "test_fixtures.py::TestExample::test_fixtureDemo3",
   "test_fixtures.py::test_fix1",
   "test_fixturesData.py::TestExample2::test_editProfile"
 ]

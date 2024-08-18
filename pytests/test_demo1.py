@@ -17,11 +17,11 @@ import pytest
 @pytest.mark.smoke
 @pytest.mark.skip
 def test_firstProgram(setup):
-    print("Hello")
+    print("PANAMA")
 
-@pytest.mark.xfail
+# @pytest.mark.xfail
 def test_SecondGreetCreditCard():
-    print("Good Morning")
+    print("CHILE")
 
 
 

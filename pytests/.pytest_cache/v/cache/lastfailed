@@ -3,7 +3,5 @@
   "test_demo2.py::test_FirstProgram": true,
   "test_demo1.py::test_crossBrowser": true,
   "test_fixturesData.py::TestExample2::test_editProfile": true,
-  "test_demo3.py::test_crossBrowser[crossBrowser0]": true,
-  "test_demo3.py::test_crossBrowser[crossBrowser1]": true,
-  "test_demo3.py::test_crossBrowser[crossBrowser2]": true
+  "test_demo2.py::test_firstProgram": true
 }

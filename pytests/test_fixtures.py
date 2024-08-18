@@ -1,5 +1,10 @@
-import pytest
+''' Data driven Fixtures to load data into tests '''
 
+
+# datadriven and parameterization can be done with return statements in tuple format
+# when you define fixture scope to class only, it will run once before class is initiated and at the end
+
+import pytest
 
 @pytest.mark.usefixtures("setup")  # passed the fixture name mentioned in conftest file as parameter
 class TestExample:
