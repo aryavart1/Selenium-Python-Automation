@@ -7,7 +7,6 @@
 
 import pytest
 
-
 @pytest.fixture(scope="class")  # the fixture will run once before and after Class
 def setup():
     print("I will be executing first --p")
@@ -18,8 +17,6 @@ def setup():
 def dataLoad():
     print("user profile data is being created")
     return ["Mr", "Robot", "rahulshettyacademy.com"]
-
-
 
 @pytest.fixture(params=[("chrome", "Mr", "Robot"), ("Firefox", "Robot"), ("IE", "Mr")])
 def crossBrowser(request):  # need to pass 'request' as a parameter when passing values from fixture

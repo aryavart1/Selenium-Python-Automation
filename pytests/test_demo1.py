@@ -24,8 +24,6 @@ def test_SecondGreetCreditCard():
     title = "Lizaaaa first demo session"
     assert title == "Amazon"
 
-
-
 @pytest.fixture()
 def setup():
     print("I will be executing first")
