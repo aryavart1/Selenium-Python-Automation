@@ -21,7 +21,8 @@ def test_firstProgram(setup):
 
 # @pytest.mark.xfail
 def test_SecondGreetCreditCard():
-    print("CHILE")
+    title = "Lizaaaa first demo session"
+    assert title == "Amazon"
 
 
 
