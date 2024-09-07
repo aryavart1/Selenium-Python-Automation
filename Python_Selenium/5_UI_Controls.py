@@ -1,4 +1,4 @@
-""" Handling CheckBox dynamically using Selenium Python programming """
+    """ Handling CheckBox dynamically using Selenium Python programming """
 
 # import time
 from selenium import webdriver
