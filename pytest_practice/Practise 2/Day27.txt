@@ -1,0 +1,41 @@
+Day-27
+----------
+Skip tests
+Ordering 
+dependant tests
+grouping
+parallel testing
+etc...
+
+
+Skipping
+	@pytest.mark.skip
+
+Ordering
+
+	install pacakge :  pytest-ordering	
+
+	1) pytest.ini file   ---> contains customized markers
+	2) @pytest.mark.first
+	(or)
+	3) @pytest.mark.run(order=1) 
+
+Dependant tests
+	@pytest.mark.dependency()
+
+
+Grouping
+	   @pytest.mark.sanity
+   	    @pytest.mark.regression
+
+	 	pytest.ini file   ---> contains customized markers
+	
+	Command to execute: 	pytest -v -s -m "sanity" day27\test_Grouping.py
+	
+
+Parallel execution
+		install package:  pytest-xdist
+
+	Command to execute:  pytest -n=3 -v -s day27\test_Parallel.py 
+
+		
