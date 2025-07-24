@@ -18,7 +18,7 @@ import pytest
 @pytest.mark.skip
 def test_firstProgram(setup):
     print("PANAMA")
-
+ 
 # @pytest.mark.xfail
 def test_SecondGreetCreditCard():
     title = "Lizaaaa first demo session"

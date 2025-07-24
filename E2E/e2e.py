@@ -51,5 +51,5 @@ driver.find_element(By.CSS_SELECTOR, "input[type='submit']").click()
 success_text = driver.find_element(By.CLASS_NAME, "alert-success").text
 assert "Success! Thank you! Your order will be delivered in next few weeks :-)." in success_text
 
-
+driver.close()
 

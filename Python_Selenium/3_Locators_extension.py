@@ -33,3 +33,6 @@ driver.find_element(By.CSS_SELECTOR, "#confirmPassword").send_keys("Password123"
 # Save New Password button on Page 2
 # Locator used -> XPath for text -> //tagname[text()='text name']
 driver.find_element(By.XPATH, "//button[text()='Save New Password']").click()
+
+
+#driver.close()

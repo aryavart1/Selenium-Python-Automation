@@ -23,7 +23,7 @@ Project-->Test suite--> Test cases--> Test steps
 Project--->Directory-->Modules(.py)-->Class-->Test Methods
 
 
-Naming Convensions
+Naming Conventions
 -------------
 1) File names should starting with test_ or ending with _test , as in test_example.py or example_test.py 
 2) Class name should start with “Test”, as in TestExample 
